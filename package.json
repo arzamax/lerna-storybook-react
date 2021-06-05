@@ -8,7 +8,7 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "storybook": "start-storybook -p 5555",
     "build-storybook": "build-storybook",
-    "lint": "eslint \"./packages/**/*.{ts,tsx}\"",
+    "lint": "eslint \"./packages/**/*.{ts,tsx}\" --fix",
     "prepare": "husky install"
   },
   "lint-staged": {
