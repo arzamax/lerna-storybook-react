@@ -1,6 +1,7 @@
 {
   "name": "root",
   "private": true,
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ],
@@ -8,8 +9,12 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "storybook": "start-storybook -p 5555",
     "build-storybook": "build-storybook",
+    "build": "lerna run --parallel build",
+    "postbuild": "lerna run --stream build:declaration",
     "lint": "eslint \"./packages/**/*.{ts,tsx}\" --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prerelease": "yarn build",
+    "release": "lerna publish"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -17,6 +22,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
     "@storybook/addons": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@storybook/theming": "^6.2.9",
