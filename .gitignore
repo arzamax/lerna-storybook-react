@@ -4,5 +4,8 @@
 # production
 /dist
 
+# log
+*.log
+
 # IDE
 .idea
