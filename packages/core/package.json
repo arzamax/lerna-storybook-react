@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build:": "BABEL_ENV=build babel src --root-mode upward --out-dir dist --extensions .ts,.tsx --delete-dir-on-start --no-comments",
+    "build": "BABEL_ENV=build babel src --root-mode upward --out-dir dist --extensions .ts,.tsx --delete-dir-on-start --no-comments",
     "build:declaration": "tsc --project tsconfig.build.json"
   },
   "dependencies": {
