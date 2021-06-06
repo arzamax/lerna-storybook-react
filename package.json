@@ -9,8 +9,9 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "storybook": "start-storybook -p 5555",
     "build-storybook": "build-storybook",
-    "build": "lerna run --parallel build",
+    "build": "lerna run --stream build",
     "postbuild": "lerna run --stream build:declaration",
+    "test": "jest",
     "lint": "eslint \"./packages/**/*.{ts,tsx}\" --fix",
     "prepare": "husky install",
     "prerelease": "yarn build",
@@ -18,6 +19,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
+      "yarn test",
       "yarn lint"
     ]
   },
@@ -30,8 +32,11 @@
     "@storybook/addons": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@storybook/theming": "^6.2.9",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "babel-jest": "^27.0.2",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -40,6 +45,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
+    "jest": "^27.0.4",
     "lerna": "^4.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.1",

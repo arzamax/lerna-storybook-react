@@ -1,6 +1,7 @@
-import { ButtonTitle, useButtonTitle } from '@example/utils';
+import React from 'react';
+import { useButtonTitle } from '@example/utils';
 
-export const Button = (props: ButtonTitle) => {
+export const Button = () => {
   const title = useButtonTitle();
 
   return <button>{title}</button>;

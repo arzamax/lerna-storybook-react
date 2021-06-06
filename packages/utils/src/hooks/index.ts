@@ -1,1 +1,1 @@
-export * from './use-button-title';
+export { useButtonTitle } from './use-button-title';

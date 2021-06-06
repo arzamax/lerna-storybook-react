@@ -1,1 +1,1 @@
-**WIP**
+Lerna-storybook-react-starter
